@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Input and Label Styles */
+    .my-input {
+        @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight dark:text-white dark:bg-slate-800 dark:border-gray-500 dark:focus:border-blue-500 focus:border-blue-500;
+    }
+    .my-label {
+        @apply block dark:text-white text-sm font-semibold mb-2 text-blue-500 capitalize;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply rounded border py-2 px-5 text-sm font-semibold transition-colors duration-300 border-none;
+    }
+
+    .btn-submit {
+        @apply text-white bg-blue-500;
+    }
+
+    .btn-reset {
+        @apply text-white bg-red-500;
+    }
+
+    .btn-back {
+        @apply text-white bg-orange-500;
+    }
+
+    /* Profile Picture */
+    .profile {
+        @apply w-10 h-10 rounded-full flex justify-center items-center bg-blue-500 text-white text-base;
+    }
+
+    /* Checkbox */
+    .checkbox {
+        @apply absolute w-full h-full opacity-0 z-10 cursor-pointer;
+    }
+    .checkboxSpan {
+        @apply border-2 border-gray-200 block h-full rounded-full before:absolute before:left-1 before:bg-gray-200 before:bottom-1 before:w-4 before:h-4 before:rounded-full peer-checked:before:left-7 peer-checked:border-blue-500 peer-checked:before:bg-blue-500 before:transition-all before:duration-300;
+    }
+
+    .nav-item:hover svg path{
+        --tw-text-opacity: 1;
+        color: rgb(240 30 39 / var(--tw-text-opacity));
+    }
+
+    /* Login Form Elements */
+    .login-form-input,
+    .login-form-multiselect,
+    .login-form-select,
+    .login-form-textarea {
+        @apply w-full rounded border border-gray-200 bg-white py-2 px-4 text-sm font-semibold text-gray-900 outline-none;
+    }
+    .btn-gradient {
+        @apply text-white bg-orange-500;
+    }
+    th {
+        @apply text-blue-500 capitalize;
+    }
+}
+
+@layer utilities {
+    /* Custom Text Colors */
+    .text-white-dark {
+        --tw-text-opacity: 1;
+        color: rgb(136 142 168 / var(--tw-text-opacity));
+    }
+    /* Invalid Input State */
+    .is-invalid {
+        border: 1px solid #EF4444;
+    }
+}
+
+@variants hover, focus, active {
+    /* Login Form Elements */
+    .submit-btn {
+        @apply shadow bg-blue-500;
+    }
+}
